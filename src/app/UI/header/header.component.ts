@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private initMenu(): void {
     this.httpService.getMenu().pipe(takeUntil(this.destroy)).subscribe(data => {
       this.menu = data.menu;
-      console.log(this.menu)
     }, err => {
       console.log(err)
     });

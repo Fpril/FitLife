@@ -1,0 +1,60 @@
+@import "../../mixins.scss";
+
+.container {
+    @include flexbox();
+    position: relative;
+    flex-direction: column;
+    padding: 20px 50px;
+}
+
+.team {
+    @include flexbox();
+}
+
+h1 {
+    font-size: 8vw;
+    letter-spacing: 3vw;
+    line-height: 120%;
+}
+
+img {
+    width: 60%;
+}
+
+.buttons {
+    position: absolute;
+    top: 50vh;
+}
+
+ul {
+    @include flexbox();
+    list-style: none;
+}
+
+ul li {
+    margin: 0 110px;
+}
+
+a img {
+    position: absolute;
+    width: 8vw;
+    transition: 0.5s ease-in-out;
+    box-sizing: content-box;
+}
+
+.color {
+    height: 0;
+    z-index: 10;
+}
+
+.color.red {
+    border-bottom: 3px solid #EA2532;
+}
+
+.color.blue {
+    border-bottom: 3px solid #2760BF;
+}
+
+a:hover img.color {
+    height: 8vw;
+}
