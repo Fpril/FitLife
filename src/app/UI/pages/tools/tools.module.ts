@@ -1,20 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivityComponent } from './activity/activity.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateWorkoutComponent } from './create-workout/create-workout.component';
+import { CreateFoodComponent } from './create-food/create-food.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
-    path: 'activity',
-    component: ActivityComponent
+    path: 'createWorkout',
+    component: CreateWorkoutComponent
+  },
+  {
+    path: 'createFood',
+    component: CreateFoodComponent
   }
 ]
 
 @NgModule({
-  declarations: [ActivityComponent],
+  declarations: [CreateWorkoutComponent, CreateFoodComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule

@@ -23,7 +23,7 @@ img {
 
 .buttons {
     position: absolute;
-    top: 50vh;
+    top: 300px;
 }
 
 ul {
@@ -37,7 +37,7 @@ ul li {
 
 a img {
     position: absolute;
-    width: 8vw;
+    width: 100px;
     transition: 0.5s ease-in-out;
     box-sizing: content-box;
 }
@@ -56,5 +56,5 @@ a img {
 }
 
 a:hover img.color {
-    height: 8vw;
+    height: 100px;
 }

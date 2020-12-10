@@ -16,9 +16,15 @@
             "subparagraphs": []
         },
         {
-            "name": "Активність",
-            "link": "tools/activity",
-            "subparagraphs": []
+            "name": "Інструменти",
+            "link": "",
+            "subparagraphs": [
+                {
+                    "name": "Конструктор тренувань",
+                    "link": "tools/createWorkout",
+                    "subparagraphs": []
+                }
+            ]
         }
     ]
 }

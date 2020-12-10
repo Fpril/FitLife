@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="modeForm">
+        <label>
+            <input type="radio" formControlName="mode" value="gymnastic">
+            <span>Вправа</span>
+        </label>
+    </form>
+    <form class="gymnastic" [formGroup]="gymnasticForm" *ngIf="modeForm.get('mode').value == 'gymnastic'" novalidate>
+        <label>
+            <span>Назва:</span>
+            <input type="text" formControlName="name">
+        </label>
+        <span class="red"></span>
+        <label>
+            <span>Одиниці виміру:</span>
+            <select formControlName="units">
+                <option value="повтори">Повтори</option>
+                <option value="хвилини">Хвилини</option>
+            </select>
+        </label>
+        <div class="button" (click)="saveGymnastic()"></div>
+    </form>
+</div>

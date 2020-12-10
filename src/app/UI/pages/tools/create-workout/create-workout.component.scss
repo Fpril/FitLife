@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0 0 0;
+}
+
+span {
+    margin: 0 20px;
+}
+
+input[type = 'text'], input[type = 'number'], select, option {
+    font-size: 18px;
+    border-radius: 5px;
+    color: #303030;
+}
+
+.gymnastic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+        margin: 20px 0;
+    }
+
+    .button::after {
+        content: 'Зберегти';
+    }
+}
+
+.red {
+    color: #c53a3a;
+    opacity: 0;
+    height: 14px;
+}
+
+.red.active {
+    opacity: 1;
+}
+
+form {
+    margin: 20px 0;
+}

@@ -1,129 +1,117 @@
-.search {
-  width: 100%;
-  position: relative;
+.container {
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.container.blur {
+filter: blur(20px);
+pointer-events: none;
+user-select: none;
+}
+
+.add, .controls {
   display: flex;
+  justify-content: center;
 }
 
-.searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+.add .button:nth-of-type(1)::after {
+  content: 'Додати їжу';
+}
+.add .button:nth-of-type(2)::after {
+  content: 'Додати дієту';
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
+.controls .button:nth-of-type(1)::after {
+  content: 'Очистити';
 }
 
-.searchButton {
-  width: auto;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+.popupcontrols {
+margin: auto;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
-  position: relative;
+.popupcontrols svg {
+margin: 0 30px;
 }
 
-.listOfProd{
-    margin-top: 1%;
-    width: 30%;
-    height: auto;
-    background-color: #00B4CC;
+.responsive-table {
+li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.table-header {
+  background-color: #95A5A6;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+.col-1 {
+  flex-basis: 30%;
+}
+.col-2 {
+  flex-basis: 30%;
+}
+.col-3 {
+  flex-basis: 30%;
+}
+.col-4 {
+  flex-basis: 10%;
+}
+.col {
+    color: #303030;
 }
 
-.tableFl{
+@media all and (max-width: 767px) {
+  .table-header {
+    display: none;
+  }
+  .table-row{
+    
+  }
+  li {
+    display: block;
+  }
+  .col {
+    
+    flex-basis: 100%;
+    
+  }
+  .col {
     display: flex;
-}
-table {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    table-layout: fixed;
-  }
-  
-  table caption {
-    font-size: 1.5em;
-    margin: .5em 0 .75em;
-  }
-  
-  table tr {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: .35em;
-  }
-  
-  table th,
-  table td {
-    padding: .625em;
-    text-align: center;
-  }
-  
-  table th {
-    font-size: .85em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-  
-  @media screen and (max-width: 600px) {
-    table {
-      border: 0;
-    }
-  
-    table caption {
-      font-size: 1.3em;
-    }
-    
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-    
-    table tr {
-      border-bottom: 3px solid #ddd;
-      display: block;
-      margin-bottom: .625em;
-    }
-    
-    table td {
-      border-bottom: 1px solid #ddd;
-      display: block;
-      font-size: .8em;
+    padding: 10px 0;
+    &:before {
+      color: #6C7A89;
+      padding-right: 10px;
+      content: attr(data-label);
+      flex-basis: 50%;
       text-align: right;
     }
-    
-    table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    
-    table td:last-child {
-      border-bottom: 0;
-    }
   }
+}
+}
+
+.popup .responsive-table {
+.col-1 {
+  flex-basis: 20%;
+}
+.col-2 {
+  flex-basis: 40%;
+}
+.col-3 {
+  flex-basis: 40%;
+}
+input {
+  color: #303030;
+}
+}
+
+svg {
+  cursor: pointer;
+}

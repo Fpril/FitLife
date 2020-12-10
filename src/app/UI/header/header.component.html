@@ -16,7 +16,7 @@
                                 <span class="menu__arrow arrow" (click)="toggleSubMenu($event.target)"></span>
                                 <ul class="sub-menu__list">
                                     <li *ngFor="let subObj of obj.subparagraphs">
-                                        <a [routerLink]="[subObj.link, subObj.id]" class="sub-menu__link">{{subObj.name}}</a>
+                                        <a [routerLink]="[subObj.link]" class="sub-menu__link">{{subObj.name}}</a>
                                     </li>
                                 </ul> 
                             </ng-template>
