@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpService {
 
-  private url: string = 'http://localhost:8080/';
+  private url: string = 'https://guarded-gorge-21245.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
